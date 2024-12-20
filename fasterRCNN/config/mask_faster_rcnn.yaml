@@ -1,0 +1,24 @@
+# 데이터셋
+task: Mask
+data_files:
+  annotation_file: "파일 경로 지정"
+  image_file: "파일 경로 지정"
+  annotation_val_file: "파일 경로 지정"
+  image_val_file: "파일 경로 지정"
+  annotation_test_file: "파일 경로 지정"
+  image_test_file: "파일 경로 지정"
+
+batch_size: 4
+
+# 초기화
+random_seed: 54321
+
+# 레귤러리제이션
+l2_reg_lambda: 5.0e-4
+
+momentum: 0.9
+lr: 5.0e-3
+
+
+# 트레이닝 프로세스
+max_epochs: 10
