@@ -1,0 +1,31 @@
+# 데이터셋
+task: Amazon
+
+data_files:
+  Amazon:
+    train_file: "학습 데이터"
+    val_file: "평가 데이터"
+
+# 모델
+model: gpt2
+
+
+# batch & cycle
+batch_size: 8r
+logging_steps: 5000
+save_steps: 8000
+eval_steps: 4000
+warmup_steps: 5000
+
+max_seq_length: 512
+
+# 초기화
+random_seed: 54321
+
+optimizer: adam
+optimizer_params:
+  adam:
+    lr: 5.0e-5
+
+# 트레이닝 프로세스
+max_epochs: 3.0
