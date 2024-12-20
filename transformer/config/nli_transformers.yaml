@@ -1,0 +1,17 @@
+# 데이터셋
+task: qnli
+
+data_files:
+  custom:
+    train_file: "학습 데이터"
+    val_file: "평가 데이터"
+
+# cycle
+save_steps: 8000
+eval_steps: 4000
+warmup_ratio: 0.1
+
+max_seq_length: 128
+
+# 트레이닝 프로세스
+max_epochs: 3.0
