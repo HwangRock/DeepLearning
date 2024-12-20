@@ -1,0 +1,34 @@
+# 데이터셋
+task: EN2DE
+
+data_files:
+  EN2DE:
+    train_file: "학습 데이터 경로"
+    test_file: "테스트 데이터 경로"
+    dev_file: "평가 데이터 경로"
+
+# 디멘션
+model: RNN
+model_params_rnn:
+  hidden_size: 1000
+  teacher_forcing_ratio: 1.0
+
+batch_size: 128
+
+# 초기화
+random_seed: 54321
+embedding_file: "워드임베딩 경로"
+embedding_dim: 300
+vocab_size: 30000
+use_unk_for_oov: true
+
+optimizer: adam
+
+optimizer_params:
+  adam:
+    lr: 1.0e-3
+    #betas: [0.7, 0.999]
+    #weight_decay: 1.0e-7
+
+# 트레이닝 프로세스
+max_epochs: 50
